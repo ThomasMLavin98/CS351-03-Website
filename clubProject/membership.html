@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Membership</title>
+        <link rel="stylesheet" href="club.css">
+        <script src="Thanks.js"></script>
+    </head>
+    <body> 
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li class = "active"><a href="membership.html">Membership</a></li>
+            </ul>
+        </nav>
+        <main>
+        <h1>Apply</h1>
+            <div class = "grid">
+                <label for="name" class = "label">Name: </label>
+                <input type="text" id="name" name="NameSpace">
+                <label for="email" class = "label">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="select" class = "label">Favorite primary color: </label>
+                <select id = "choice">
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Yellow">Yellow</option>
+                </select>
+                <button type="button" id="confirmButton">Confirm</button>
+            </div>
+        <section id = "thanksDialog">
+            <h2>Thanks for signing up</h2>
+            <p id = "combinedInfo"></p>
+            <button type="button" id="closeButton">Close</button>
+        </section>
+        </main>
+        <footer>
+            &copy; 2020 ei3265
+        </footer>
+        <script>
+            var myButton = document.getElementById("confirmButton");
+            myButton.addEventListener("click", ()=>thanksInfo());
+            var myButton2 = document.getElementById("closeButton");
+            myButton2.addEventListener("click", ()=>closeInfo())
+        </script> 
+    </body>
+</html>
