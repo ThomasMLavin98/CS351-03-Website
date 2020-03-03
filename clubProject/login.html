@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Activities</title>
+        <title>Login</title>
         <link href="club.css" rel="stylesheet">
     </head>
     <body>
@@ -32,25 +32,23 @@
         </nav>
         <main>
            <header>
-    <h1>Activities </h1>
-    <img src="images/shrug.jpg" class ="img" alt="''shrug''">
+    <h1>Login </h1>
 </header>
-<section id = "ActivityTable">
-     <table>
-        <thread>
-            <tr>
-                <td>Event</td>
-                <td>Date</td>
-                </tr>
-        </thread>
-        <tbody></tbody>
-    </table>
-</section>
-<script src="activities.js"></script>
-<script src="eventData.js"></script>
+<p>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <label for="password">Password:</label>
+    <input type="password" id="pass" placeholder="password">
+    <button type="button" id="loginButton">Login</button>
+</p>
 <script>
-    window.onload = activityTable();
-</script>
+    var myButton = document.getElementById("loginButton");
+    myButton.addEventListener("click", ()=>loginInfo());
+    function loginInfo() {
+        console.log("Email: " + document.getElementById("email").value + " Password: " + document.getElementById("pass").value);
+    }
+</script> 
+
         </main>
         <footer>
             &#129313; &copy; 2020 ei3265 &#129381;

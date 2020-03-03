@@ -1,50 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <title>Membership</title>
-        <link rel="stylesheet" href="club.css">
-        <script src="Thanks.js"></script>
+        <link href="club.css" rel="stylesheet">
     </head>
-    <body> 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="activities.html">Activities</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="Login.html">Login</a></li>
-                <li class = "active"><a href="membership.html">Membership</a></li>
-            </ul>
+    <body>
+        <script>
+            function navClick() {
+                var link = document.getElementById("links");
+                var holder = document.getElementById("placeHolder");
+                if(link.style.display == "none") {
+                    link.style.display = "contents";
+                    holder.style.display = "none";
+                }
+                else {
+                    link.style.display = "none";
+                    holder.style.display = "contents";
+                }
+            }
+        </script>
+        <nav onclick = "navClick()" id="navMenu">
+            <ul id = links>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="membership.html">Membership</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="activities.html">Activities</a></li>
+    <li><a href="login.html">Login</a></li>
+</ul>
+<p id = placeHolder>+</p>
         </nav>
         <main>
-        <h1>Apply</h1>
-            <div class = "grid">
-                <label for="name" class = "label">Name: </label>
-                <input type="text" id="name" name="NameSpace">
-                <label for="email" class = "label">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="select" class = "label">Favorite primary color: </label>
-                <select id = "choice">
-                    <option value="Red">Red</option>
-                    <option value="Blue">Blue</option>
-                    <option value="Yellow">Yellow</option>
-                </select>
-                <button type="button" id="confirmButton">Confirm</button>
-            </div>
-        <section id = "thanksDialog">
-            <h2>Thanks for signing up</h2>
-            <p id = "combinedInfo"></p>
-            <button type="button" id="closeButton">Close</button>
-        </section>
+           <h1>Apply</h1>
+    <div class = "grid">
+        <label for="name" class = "label">Name: </label>
+        <input type="text" id="name" name="NameSpace">
+        <label for="email" class = "label">Email:</label>
+        <input type="email" id="email" name="email">
+        <label for="select" class = "label">Favorite primary color: </label>
+        <select id = "choice">
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Yellow">Yellow</option>
+        </select>
+        <button type="button" id="confirmButton">Confirm</button>
+    </div>
+<section id = "thanksDialog">
+    <h2>Thanks for signing up</h2>
+    <p id = "combinedInfo"></p>
+    <button type="button" id="closeButton">Close</button>
+</section>
+<script src="Thanks.js"></script>
+<script>
+    var myButton = document.getElementById("confirmButton");
+    myButton.addEventListener("click", ()=>thanksInfo());
+    var myButton2 = document.getElementById("closeButton");
+    myButton2.addEventListener("click", ()=>closeInfo())
+</script>
         </main>
         <footer>
-            &copy; 2020 ei3265
+            &#129313; &copy; 2020 ei3265 &#129381;
         </footer>
-        <script>
-            var myButton = document.getElementById("confirmButton");
-            myButton.addEventListener("click", ()=>thanksInfo());
-            var myButton2 = document.getElementById("closeButton");
-            myButton2.addEventListener("click", ()=>closeInfo())
-        </script> 
     </body>
 </html>
