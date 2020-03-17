@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Activities</title>
+        <title>Activities Page</title>
         <link href="club.css" rel="stylesheet">
     </head>
     <body>
@@ -32,24 +32,25 @@
         </nav>
         <main>
            <header>
-    <h1>Activities </h1>
-    <img src="images/shrug.jpg" class ="img" alt="''shrug''">
+
+<h1 id="activities">Activities</h1>
+<p><img src="images/shrug.jpg" alt="&#39;&#39;shrug&#39;&#39;"></p>
 </header>
-<section id = "ActivityTable">
-     <table>
-        <thread>
-            <tr>
-                <td>Event</td>
-                <td>Date</td>
-                </tr>
-        </thread>
-        <tbody></tbody>
-    </table>
+
+<section id="ActivityTable">
+<table>
+<tbody>
+<tr>
+<td>Event</td>
+<td>Date</td>
+</tr>
+</tbody>
+</table>
 </section>
 <script src="activities.js"></script>
 <script src="eventData.js"></script>
 <script>
-    window.onload = activityTable();
+        window.onload = activityTable();
 </script>
         </main>
         <footer>

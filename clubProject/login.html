@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Login</title>
+        <title>Login Page</title>
         <link href="club.css" rel="stylesheet">
     </head>
     <body>
@@ -31,7 +31,8 @@
 <p id = placeHolder>+</p>
         </nav>
         <main>
-           <header>
+           
+<header>
     <h1>Login </h1>
 </header>
 <p>
@@ -42,12 +43,12 @@
     <button type="button" id="loginButton">Login</button>
 </p>
 <script>
-    var myButton = document.getElementById("loginButton");
-    myButton.addEventListener("click", ()=>loginInfo());
-    function loginInfo() {
-        console.log("Email: " + document.getElementById("email").value + " Password: " + document.getElementById("pass").value);
-    }
-</script> 
+        var myButton = document.getElementById("loginButton");
+        myButton.addEventListener("click", ()=>loginInfo());
+        function loginInfo() {
+            console.log("Email: " + document.getElementById("email").value + " Password: " + document.getElementById("pass").value);
+        }
+</script>
 
         </main>
         <footer>
